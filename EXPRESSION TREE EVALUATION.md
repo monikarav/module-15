@@ -1,32 +1,46 @@
-# Experiment 9(e): Expression Tree Evaluation
+# Exp No : 15 
+# SEB 
 
 ## Aim
-To write a Python program to build and evaluate the given expression tree.
 
----
+To Write a python program to implement push and pop an element into the below given Heap tree using a single built-in function.
 
 ## Algorithm
 
 1. Start the program.
-2. Create nodes for operators and operands.
-3. Build the expression tree by connecting the nodes in the correct hierarchical structure.
-4. Define a recursive function `evaluate(root)`:
-   - If the node is a number (leaf), return it as a float.
-   - Else, recursively evaluate the left and right subtrees.
-   - Apply the operator at the current node to the results.
-5. Return the final result from the root node.
-6. End the program.
+   
+2. Import heapq Module: Import the heapq module to use heap operations.
 
----
+3. Initialize List: Define a list li with given integer elements.
+
+4. Convert to Heap: Use heapq.heapify(li) to convert the list into a min-heap in-place.
+
+5. Display Heap: Print the heapified list.
+
+6. Take Input: Read an integer a from the user.
+
+7. Heap Replace: Use heapq.heapreplace(li, a) to replace the smallest element with a (pop and push in one step).
+
+8. Display Updated Heap: Print the modified heap after the heapreplace operation.
+
+9. Stop the program.
 
 ## Program
 
-```python
-
+```
+import heapq
+li=[4, 6, 15, 10, 8, 18, 21]
+heapq.heapify(li)
+print("The created heap is : ",li)
+a=int(input())
+heapq.heapreplace(li,a)
+print("Heap after pushpop operation: ",li)
 ```
 
 ## OUTPUT
 
+![image](https://github.com/user-attachments/assets/8936aafa-c53b-487f-af67-c896cb29ddd9)
 
 ## RESULT
 
+Thus the python program to implement push and pop an element into the below given Heap tree using a single built-in function was successfully implemented.
